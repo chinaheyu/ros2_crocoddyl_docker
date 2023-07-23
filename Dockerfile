@@ -21,7 +21,7 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
     rosdep install --from-paths /opt/ros/$ROS_DISTRO/share/pinocchio --ignore-src -r -y && \
     rm -rf /var/lib/apt/lists/*
 
-# Compiled the crocoddyl package under ros noetic.
+# Compiled the crocoddyl package under ros workspace.
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
     colcon build --mixin "release"
 
